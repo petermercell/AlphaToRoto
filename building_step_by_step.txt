@@ -2,7 +2,7 @@ LINUX:
 
 rm -rf build && mkdir build && cd build
 
-cmake .. -DNUKE_VERSION=17.0v1 -DNUKE_INSTALL_PATH=/opt/Nuke17.0v1 -DCMAKE_INSTALL_PREFIX=~/.nuke
+cmake .. -DNUKE_VERSION=17.0v1 -DNUKE_INSTALL_PATH=/opt/Nuke17.0v1
 
 make 
 
