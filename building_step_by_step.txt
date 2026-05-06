@@ -6,5 +6,8 @@ cmake .. -DNUKE_VERSION=17.0v1 -DNUKE_INSTALL_PATH=/opt/Nuke17.0v1
 
 make 
 
+# Then copy build/AlphaToRoto.so and Python/NO_NUMPY/alphaToRoto_py.py or Python/NUMPY/alphaToRoto_py.py (if you have Numpy install in Nuke)
+# into ~/.nuke (or your studio's NUKE_PATH location).
+
 ////
 
