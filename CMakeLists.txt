@@ -31,7 +31,9 @@
 #
 # Then:
 #   cmake --build build --config Release
-#   cmake --install build --prefix ~/.nuke
+#
+# This produces build/AlphaToRoto.so. Copy it (and the contents of python/)
+# into ~/.nuke or your studio's NUKE_PATH location manually.
 #
 # Potrace 1.16 is already vendored in third_party/potrace/src/.
 
@@ -169,16 +171,10 @@ endif()
 set_target_properties(AlphaToRoto PROPERTIES SUFFIX ".so")
 
 # ============================================================================
-# Install
+# Install: intentionally omitted. Installation is manual -- after building,
+# copy build/AlphaToRoto.so and the contents of python/ to your Nuke plugin
+# path (typically ~/.nuke).
 # ============================================================================
-install(TARGETS AlphaToRoto
-    LIBRARY DESTINATION .)
-
-install(FILES
-        python/alphaToRoto_py.py
-        python/init.py
-        python/menu.py
-    DESTINATION .)
 
 # ============================================================================
 # Summary
@@ -191,6 +187,5 @@ message(STATUS "  Nuke root     : ${NUKE_INSTALL_PATH}")
 message(STATUS "  Nuke include  : ${_nuke_include}")
 message(STATUS "  Nuke lib      : ${_nuke_lib}/${_nuke_libname}")
 message(STATUS "  Build type    : ${CMAKE_BUILD_TYPE}")
-message(STATUS "  Install prefix: ${CMAKE_INSTALL_PREFIX}")
 message(STATUS "========================================")
 message(STATUS "")
