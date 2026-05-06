@@ -11,3 +11,14 @@ make
 
 ////
 
+MAC:
+
+cd /Users/g/Downloads/AlphaToRoto-main
+
+rm -rf build && mkdir build && cd build
+
+cmake .. -DNUKE_VERSION=17.0v1
+
+make
+
+////
