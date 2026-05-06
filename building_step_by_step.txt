@@ -22,3 +22,9 @@ cmake .. -DNUKE_VERSION=17.0v1
 make
 
 ////
+
+WIN:
+
+cd C:\Users\WORKSTATION\Downloads\AlphaToRoto-main\AlphaToRoto-main
+
+rmdir /s /q build 2>nul & mkdir build && cd build && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=cl -DNUKE_VERSION=17.0v1 && cmake --build .
